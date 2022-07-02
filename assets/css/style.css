@@ -83,3 +83,15 @@ body {
     bottom: 20px;
   }
 }
+
+@media screen and (max-width: 1400px) {
+  .frame {
+    width: 1300px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .frame {
+    width: 575px;
+  }
+}
