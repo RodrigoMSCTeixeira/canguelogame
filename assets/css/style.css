@@ -92,12 +92,10 @@ body {
 
   .hole {
     width: 130px;
-    height: auto;
   }
 
   .human {
     width: 120px;
-    height: auto;
   }
 
   @keyframes hole-animation {
