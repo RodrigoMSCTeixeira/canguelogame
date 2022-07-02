@@ -84,23 +84,20 @@ body {
   }
 }
 
-@media screen and (max-width: 1400px) {
-  .frame {
-    width: 1300px;
-  }
-}
-
 @media screen and (max-width: 991px) {
   .frame {
     width: 990px;
+    position: absolute;
     height: auto;
   }
 
   .hole {
+    position: relative;
     width: 130px;
   }
 
   .human {
+    position: relative;
     width: 120px;
   }
 
