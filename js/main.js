@@ -1,4 +1,5 @@
 const human = document.querySelector(".human");
+const frame = document.querySelector(".frame");
 const hole = document.querySelector(".hole");
 const score = document.querySelector(".score");
 const restart = document.querySelector(".button");
@@ -41,7 +42,7 @@ const loop = setInterval(() => {
 }, 10);
 
 document.addEventListener("keydown", jump);
-document.addEventListener("click", jump);
+frame.addEventListener("click", jump);
 
 restart.addEventListener("click", () => {
   location.reload();
