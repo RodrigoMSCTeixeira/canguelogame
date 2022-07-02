@@ -25,7 +25,7 @@ const loop = setInterval(() => {
     human.style.animation = "none";
     human.style.bottom = `${humanPosition}px`;
 
-    human.src = "../assets/images/coffin.gif";
+    human.src = "./assets/images/coffin.gif";
     human.style.width = "75px";
     human.style.marginLeft = "50px";
 
@@ -38,3 +38,4 @@ const loop = setInterval(() => {
 }, 10);
 
 document.addEventListener("keydown", jump);
+document.addEventListener("click", jump);
