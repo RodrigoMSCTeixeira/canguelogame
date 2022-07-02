@@ -112,6 +112,7 @@ body {
 @media screen and (max-width: 576px) {
   .frame {
     width: 575px;
+    height: 350px;
   }
 
   @keyframes hole-animation {
