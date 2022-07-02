@@ -1,6 +1,8 @@
 const human = document.querySelector(".human");
 const hole = document.querySelector(".hole");
 const score = document.querySelector(".score");
+const restart = document.querySelector(".button");
+
 let points = 0;
 
 const jump = () => {
@@ -28,6 +30,7 @@ const loop = setInterval(() => {
     human.src = "./assets/images/coffin.gif";
     human.style.width = "75px";
     human.style.marginLeft = "50px";
+    restart.style.display = "flex";
 
     clearInterval(loop);
     lastRecord = points;
@@ -39,3 +42,7 @@ const loop = setInterval(() => {
 
 document.addEventListener("keydown", jump);
 document.addEventListener("click", jump);
+
+document.addEventListener("click", () => {
+  location.reload();
+});
