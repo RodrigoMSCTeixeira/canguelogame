@@ -90,8 +90,42 @@ body {
   }
 }
 
+@media screen and (max-width: 991px) {
+  .frame {
+    width: 990px;
+  }
+
+  .hole {
+    width: 130px;
+  }
+
+  .human {
+    width: 120px;
+  }
+
+  @keyframes hole-animation {
+    from {
+      right: -130px;
+    }
+
+    to {
+      right: 100%;
+    }
+  }
+}
+
 @media screen and (max-width: 576px) {
   .frame {
     width: 575px;
+  }
+
+  @keyframes hole-animation {
+    from {
+      right: -160px;
+    }
+
+    to {
+      right: 100%;
+    }
   }
 }
