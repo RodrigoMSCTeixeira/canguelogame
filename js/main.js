@@ -45,7 +45,10 @@ const loop = setInterval(() => {
     options.style.display = "none";
     points++;
     score.textContent = `Score: ${points}`;
-    myrecord.textContent = `High Score: ${localStorage.getItem("record")}`;
+    myrecord.textContent =
+      localStorage.getItem("record") > 0
+        ? `High Score: ${localStorage.getItem("record")}`
+        : 0;
   }
 }, 10);
 
