@@ -1,9 +1,11 @@
 const human = document.querySelector(".human");
-const frame = document.querySelector(".frame");
 const hole = document.querySelector(".hole");
 const score = document.querySelector(".score");
-const restart = document.querySelector(".button");
-
+const myrecord = document.querySelector(".record");
+const result = document.querySelector(".result");
+const options = document.querySelector(".game-options");
+const restart = document.querySelector(".restart");
+const exit = document.querySelector(".exit");
 let points = 0;
 
 const jump = () => {
@@ -16,7 +18,6 @@ const jump = () => {
 
 const loop = setInterval(() => {
   const holePosition = hole.offsetLeft;
-  console.log(holePosition);
   const humanPosition = +window
     .getComputedStyle(human)
     .bottom.replace("px", "");
@@ -28,22 +29,34 @@ const loop = setInterval(() => {
     human.style.animation = "none";
     human.style.bottom = `${humanPosition}px`;
 
-    human.src = "./assets/images/coffin.gif";
+    human.src = "../assets/images/coffin.gif";
     human.style.width = "75px";
     human.style.marginLeft = "50px";
-    restart.style.display = "flex";
 
     clearInterval(loop);
-    lastRecord = points;
+
+    if (points > localStorage.getItem("record")) {
+      localStorage.setItem("record", points);
+    }
+
+    options.style.display = "flex";
+    result.textContent = `Your Score: ${points} pts`;
   } else {
+    options.style.display = "none";
     points++;
     score.textContent = `Score: ${points}`;
+    myrecord.textContent = `High Score: ${localStorage.getItem("record")}`;
   }
 }, 10);
 
 document.addEventListener("keydown", jump);
-frame.addEventListener("click", jump);
+document.addEventListener("click", jump);
 
 restart.addEventListener("click", () => {
   location.reload();
+});
+
+exit.addEventListener("click", () => {
+  localStorage.clear();
+  close();
 });
