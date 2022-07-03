@@ -48,7 +48,7 @@ const loop = setInterval(() => {
     myrecord.textContent =
       localStorage.getItem("record") > 0
         ? `High Score: ${localStorage.getItem("record")}`
-        : 0;
+        : `High Score: 0`;
   }
 }, 10);
 
