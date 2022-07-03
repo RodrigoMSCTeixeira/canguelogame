@@ -108,7 +108,7 @@ section {
   animation: hole-animation 1.5s infinite linear;
   bottom: 0;
   position: absolute;
-  width: 190px;
+  width: 120px;
   z-index: 3;
 }
 
@@ -116,7 +116,7 @@ section {
   bottom: 20px;
   overflow: hidden;
   position: absolute;
-  width: 150px;
+  width: 120px;
 }
 
 .jump {
@@ -132,7 +132,7 @@ footer {
 
 @keyframes hole-animation {
   from {
-    right: -80px;
+    right: -120px;
   }
 
   to {
@@ -159,5 +159,26 @@ footer {
 
   100% {
     bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .game-section {
+    font-size: 8pt;
+    width: 100%;
+  }
+
+  .game-options {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  header {
+    padding: 60px;
+  }
+
+  footer {
+    padding: 60px;
   }
 }

@@ -7,7 +7,6 @@ const options = document.querySelector(".game-options");
 const restart = document.querySelector(".restart");
 const exit = document.querySelector(".exit");
 let points = 0;
-
 const jump = () => {
   human.classList.add("jump");
 
@@ -22,7 +21,7 @@ const loop = setInterval(() => {
     .getComputedStyle(human)
     .bottom.replace("px", "");
 
-  if (holePosition >= -50 && holePosition < 80 && humanPosition < 40) {
+  if (holePosition >= -10 && holePosition < 100 && humanPosition < 25) {
     hole.style.animation = "none";
     hole.style.left = `${holePosition}px`;
 
@@ -61,5 +60,5 @@ restart.addEventListener("click", () => {
 
 exit.addEventListener("click", () => {
   localStorage.clear();
-  close();
+  options.style.display = "none";
 });
