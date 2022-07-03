@@ -5,23 +5,95 @@
 }
 
 body {
-  align-items: center;
   display: flex;
+  flex-direction: column;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  justify-content: center;
-  min-height: 100vh;
+  height: 100%;
 }
 
-.frame {
+header {
+  background: #333;
+  color: #ddd;
+  padding: 30px;
+}
+
+section {
+  flex: 1 0 auto;
+  padding: 30px;
+}
+
+.game-section {
   border: 5px solid #000;
+}
+
+.game-section {
+  border-radius: 15px;
   height: 500px;
+  margin: 0 auto;
   overflow: hidden;
   position: relative;
+  width: 80%;
+}
+
+.game-section {
+  padding: 10px;
+}
+
+.score {
+  float: right;
+  position: relative;
+}
+
+.record {
+  position: absolute;
+}
+
+.game-options {
+  background: #333;
+  border-radius: 10px;
+  bottom: 300px;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  line-height: 1.5rem;
+  margin: 0 auto;
+  position: relative;
+  width: 70%;
+  z-index: 3;
+}
+
+.game-options {
+  padding: 20px;
+}
+
+.game-options .result {
+  color: #ddd;
+}
+
+.game-options div {
+  width: 20%;
+}
+
+.game-options .restart {
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
   width: 100%;
 }
 
-.frame {
-  padding: 10px;
+.game-options .restart {
+  padding: 3px;
+}
+
+.game-options .exit {
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.game-options .exit {
+  padding: 3px;
 }
 
 .title {
@@ -30,10 +102,6 @@ body {
 
 .score {
   text-align: right;
-}
-
-.button {
-  display: none;
 }
 
 .hole {
@@ -46,14 +114,20 @@ body {
 
 .human {
   bottom: 20px;
-  /* left: 80px; */
   overflow: hidden;
-  width: 150px;
   position: absolute;
+  width: 150px;
 }
 
 .jump {
   animation: jump 500ms infinite ease-in-out;
+}
+
+footer {
+  background: #333;
+  color: #ddd;
+  padding: 30px;
+  text-align: center;
 }
 
 @keyframes hole-animation {
@@ -85,42 +159,5 @@ body {
 
   100% {
     bottom: 20px;
-  }
-}
-
-@media screen and (max-width: 991px) {
-  .frame {
-    width: 100%;
-    height: 350px;
-  }
-
-  .hole {
-    width: 130px;
-  }
-
-  .human {
-    width: 120px;
-  }
-
-  @keyframes hole-animation {
-    from {
-      right: -130px;
-    }
-
-    to {
-      right: 100%;
-    }
-  }
-}
-
-@media screen and (max-width: 576px) {
-  @keyframes hole-animation {
-    from {
-      right: -160px;
-    }
-
-    to {
-      right: 100%;
-    }
   }
 }
